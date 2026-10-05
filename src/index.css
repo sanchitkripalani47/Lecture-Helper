@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 99%;
+    --foreground: 30 8% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 8% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 8% 12%;
+
+    --primary: 173 45% 22%;
+    --primary-foreground: 150 30% 98%;
+
+    --secondary: 36 12% 95%;
+    --secondary-foreground: 30 8% 18%;
+
+    --muted: 36 12% 95%;
+    --muted-foreground: 30 6% 42%;
+
+    --accent: 36 14% 93%;
+    --accent-foreground: 30 8% 16%;
+
+    --destructive: 4 62% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 42% 34%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 34 12% 88%;
+    --input: 34 12% 86%;
+    --ring: 173 45% 30%;
+
+    --radius: 0.6rem;
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 36 14% 94%;
+
+    --card: 30 9% 10%;
+    --card-foreground: 36 14% 94%;
+
+    --popover: 30 9% 10%;
+    --popover-foreground: 36 14% 94%;
+
+    --primary: 168 40% 62%;
+    --primary-foreground: 173 45% 12%;
+
+    --secondary: 30 7% 16%;
+    --secondary-foreground: 36 14% 94%;
+
+    --muted: 30 7% 16%;
+    --muted-foreground: 34 8% 64%;
+
+    --accent: 30 7% 18%;
+    --accent-foreground: 36 14% 94%;
+
+    --destructive: 4 58% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 38% 52%;
+    --success-foreground: 150 30% 8%;
+
+    --border: 30 7% 20%;
+    --input: 30 7% 22%;
+    --ring: 168 40% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

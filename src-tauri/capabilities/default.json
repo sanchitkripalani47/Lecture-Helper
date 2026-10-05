@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions needed to pick the lecture and output folders.",
+  "windows": ["main"],
+  "permissions": ["core:default", "core:event:default", "dialog:allow-open"]
+}
